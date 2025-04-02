@@ -38,19 +38,8 @@ const StaffPanel = () => {
   const checkAdminAuth = async () => {
     const adminAuthToken = localStorage.getItem("adminKey");
 
-    const [loading, setLoading] = useState(false)
+   
 
-    const handlePageLoad = () => {
-      setLoading(true);
-      // Simulate fetching data (for example, from API)
-      setTimeout(() => {
-        setLoading(false); // End loading after data is fetched
-      }, 2000); // Simulate a 2-second loading time
-    };
-
-    useEffect(() => {
-      handlePageLoad();
-    }, []);
 
     console.log("Admin Auth Token:", adminAuthToken); // Debugging line
 
@@ -86,6 +75,18 @@ const StaffPanel = () => {
 
     checkAdminAuth();
   }, []);
+
+  
+    const handlePageLoad = () => {
+      setLoading(true);
+      // Simulate fetching data (for example, from API)
+      setTimeout(() => {
+        setLoading(false); // End loading after data is fetched
+      }, 2000); // Simulate a 2-second loading time
+    };
+    useEffect(() => {
+      handlePageLoad();
+    }, []);
 
   const toggleInstructions = (orderId) => {
     setExpandedInstructions(expandedInstructions === orderId ? null : orderId);
