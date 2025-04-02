@@ -13,12 +13,8 @@ app.use(express.json());
 require('dotenv').config({ path: '../.env' });
 
 // pages/api/send-sms.js
-const twilio = require('twilio');
 
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const twilioPhone = process.env.TWILIO_PHONE_NUMBER;
-
+const PORT=process.env.PORT
 
 mongoose.connect("mongodb://localhost:27017/restaurant", {
   useNewUrlParser: true,
@@ -531,6 +527,6 @@ app.delete('/admin/delete/:id', async (req, res) => {
 
 
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
