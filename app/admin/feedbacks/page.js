@@ -120,8 +120,8 @@ const FeddbacksPage = () => {
                                             <div className="flex mb-1">
                                                 {
                                                     Array.from({ length: feedback.rating }, (_, index) => "⭐").map((star, index) => (
-                                                        <div className='flex'>  <FaStar
-                                                            key={index}
+                                                        <div key={index} className='flex'>  <FaStar
+                                                            
                                                             className={`text-yellow-500 cursor-pointer 
                                              
                                              `} /></div>
