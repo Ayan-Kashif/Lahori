@@ -53,7 +53,7 @@ const MyOrders = () => {
                     <div className="bg-white p-8 rounded-xl shadow-lg max-w-md w-full text-center">
                         <RiBillFill className="mx-auto text-6xl text-gray-300 mb-4" />
                         <h2 className="text-2xl font-bold text-gray-800 mb-2">No Orders Yet</h2>
-                        <p className="text-gray-600 mb-6">You haven't placed any orders with us yet.</p>
+                        <p className="text-gray-600 mb-6">You have not placed any orders with us yet.</p>
                         <Link href='/' className="bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-6 rounded-lg transition duration-200">
                             Order Now
                         </Link>
