@@ -142,6 +142,8 @@
 
 
 
+
+
 "use client";
 
 import React, { useState, useContext } from "react";
@@ -149,6 +151,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { FaUser, FaKey, FaSignOutAlt, FaBars, FaHome, FaUsers, FaBullhorn } from "react-icons/fa";
 import { AuthContext } from "../AuthContext";
 import { Menu, Utensils } from 'lucide-react';
+import Link from 'next/link'
 const PrinNavbar = () => {
   const router = useRouter();
   const pathname = usePathname();
@@ -169,24 +172,24 @@ const PrinNavbar = () => {
     <nav className="bg-gray-800 border-gray-200 text-white shadow-lg">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Brand Logo */}
-        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span className="self-center font-playfair text-2xl font-semibold whitespace-nowrap dark:text-white">
             LAHORI
           </span>
-        </a>
+        </Link>
 
         {/* Show only on non-login pages */}
         {!isLoginOrChangePasswordPage && (
           <>
             <div className="flex md:order-2 space-x-4 md:space-x-0 rtl:space-x-reverse">
               {/* Change Password */}
-              <a
+              <Link
                 href="/admin/change-password"
                 className="flex mx-3 items-center text-white hover:text-yellow-200 transition-colors duration-300"
                 title="Change Password"
               >
                 <FaKey className="w-5 h-5" />
-              </a>
+              </Link>
 
               {/* Logout */}
               <button
@@ -218,49 +221,49 @@ const PrinNavbar = () => {
             >
               <ul className="flex flex-col md:flex-row md:space-x-8 p-4 md:p-0 bg-gray-900 md:bg-transparent md:border-0 rounded-lg">
                 <li>
-                  <a
+                  <Link
                     href="/admin/dashboard"
                     className="flex items-center py-2 px-3 rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:hover:text-yellow-200 transition-colors"
                   >
                     <FaHome className="mr-2" />
                     Dashboard
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/admin/panel"
                     className="flex items-center py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:hover:text-yellow-200 transition-colors"
                   >
                     <FaBullhorn className="mr-2" />
                     Orders
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/admin/users"
                     className="flex items-center py-2 px-3 rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:hover:text-yellow-200 transition-colors"
                   >
                     <FaUsers className="mr-2" />
                     Users
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/admin/feedbacks"
                     className="flex items-center py-2 px-3 rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:hover:text-yellow-200 transition-colors"
                   >
                     <FaHome className="mr-2" />
                     Feedbacks
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/admin/menu"
                     className="flex items-center py-2 px-3 rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:hover:text-yellow-200 transition-colors"
                   >
                     <Utensils className="mr-2" />
                     Menu
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
