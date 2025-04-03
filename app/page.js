@@ -196,7 +196,7 @@ const App = () => {
                 {categoryItems.map((item) => (
                   <div key={item._id} className="flex bg-white shadow-lg p-4 rounded-lg items-center">
                     {/* Image */}
-                    <img src={item.image} alt={item.name} className="w-28 h-28 object-cover rounded-lg" />
+                    <img src={`/${item.image.split("/").pop()}`} alt={item.name} className="w-28 h-28 object-cover rounded-lg" />
 
                     {/* Details */}
                     <div className="ml-4 flex-1">
