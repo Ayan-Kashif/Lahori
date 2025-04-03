@@ -22,7 +22,7 @@ export default function FavoritesPage() {
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {favorites.map((item, index) => (
                         <div key={index} className="bg-gray-800 rounded-2xl p-4 shadow-lg transition-transform hover:scale-105">
-                            <img src={item.image} alt={item.title} className="w-full h-48 object-cover rounded-lg mb-4" />
+                            <img src={`/${item.image.split("/").pop()}`} alt={item.title} className="w-full h-48 object-cover rounded-lg mb-4" />
                             <h2 className="text-xl font-semibold">{item.title}</h2>
                             <p className="text-gray-400">{item.description}</p>
                         </div>
