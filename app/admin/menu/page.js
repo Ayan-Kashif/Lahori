@@ -172,7 +172,8 @@ export default function AdminPage() {
     };
 
     return (
-        <div className="max-w-5xl mx-auto py-10">
+        <div className='bg-white min-w-screen text-black'>
+        <div className="max-w-5xl text-black mx-auto py-10">
             <Toaster />
             <h1 className="text-3xl font-bold  text-green-700 text-center mb-6">Admin Menu</h1>
 
@@ -277,7 +278,7 @@ export default function AdminPage() {
             </div>
 
             {/* Menu Items List */}
-            <div className="bg-white p-6 shadow-lg rounded-lg">
+            <div className="bg-white p-6 text-black shadow-lg rounded-lg">
                 <h2 className="text-xl font-semibold mb-4 text-center">Menu Items</h2>
                 {loading ? (
                     <div className="text-center">Loading...</div>
@@ -332,5 +333,6 @@ export default function AdminPage() {
                 )}
             </div>
         </div>
+                    </div>
     );
 }
