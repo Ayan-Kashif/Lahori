@@ -291,7 +291,7 @@ export default function AdminPage() {
                                 <div className="flex items-start gap-4">
                                     {item.image && (
                                         <img 
-                                            src={item.image} 
+                                            src={`/${item.image.split("/").pop()}`}
                                             alt={item.name} 
                                             className="w-16 h-16 object-cover rounded-lg"
                                         />
