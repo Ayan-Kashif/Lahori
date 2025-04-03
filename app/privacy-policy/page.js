@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
     <>
       <Navbar />
       {loading ? <Spinner /> : (
-        <div className="bg-white pt-28 mb-10 font-sans min-h-screen p-6">
+        <div className="bg-white text-black pt-28 mb-10 font-sans min-h-screen p-6">
           <div className="max-w-3xl mx-auto">
             <header className="text-center flex flex-col mb-6">
               <div className="flex justify-center items-center gap-3">
