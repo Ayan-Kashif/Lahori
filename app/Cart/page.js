@@ -157,6 +157,7 @@ const CheckoutPage = () => {
     <>
       <Toaster position="top-center" />
       <Navbar />
+    <div className='bg-white text-black min-w-screen'>
       <div className="p-6 mt-22 max-w-4xl mx-auto bg-white shadow-lg rounded-xl">
         <h2 className="text-2xl font-bold flex items-center border-b pb-4 mb-4">
           <ShoppingCart className="mr-2 text-blue-500" /> Your Cart
@@ -328,6 +329,7 @@ const CheckoutPage = () => {
           </div>
         )}
       </div>
+          </div>
     </>
   );
 };
