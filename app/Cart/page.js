@@ -13,6 +13,7 @@ const CheckoutPage = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [deliveryMethod, setDeliveryMethod] = useState("Delivery");
   const [error, setError] = useState("");
+    const url = process.env.NEXT_PUBLIC_API_URL
   // Load cart from localStorage on mount
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -128,7 +129,7 @@ const CheckoutPage = () => {
 
 
     try {
-      const response = await fetch("http://localhost:5000/api/order", {
+      const response = await fetch(`${url}/api/order`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(orderDetails),
