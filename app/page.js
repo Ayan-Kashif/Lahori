@@ -663,7 +663,7 @@ const App = () => {
           if (categoryItems.length === 0) return null;
 
           return (
-            <div key={category} ref={(el) => (categoryRefs.current[category] = el)}>
+            <div className='bg-white text-black' key={category} ref={(el) => (categoryRefs.current[category] = el)}>
               <h2 className="text-2xl font-bold mt-6">{category}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-4">
                 {categoryItems.map((item) => (
