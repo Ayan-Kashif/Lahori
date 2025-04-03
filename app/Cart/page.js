@@ -216,7 +216,7 @@ const CheckoutPage = () => {
             return (
               <div key={index} className="flex items-center justify-between border-b pb-4 mb-4">
                 <div className="flex items-center space-x-4">
-                  <img src={item.image} alt={item.name} className="w-16 h-16 rounded-lg object-cover shadow" />
+                  <img src={`/${item.image.split("/").pop()}`} alt={item.name} className="w-16 h-16 rounded-lg object-cover shadow" />
                   <div>
                     <h3 className="font-semibold text-md md:text-lg">{item.name}</h3>
                     <p className="text-gray-600 text-sm">
