@@ -50,7 +50,7 @@ const Navbar = () => {
         <nav className="bg-gradient-to-r from-red-500 to-orange-500 text-white p-4 flex justify-between items-center shadow-lg fixed w-full top-0 z-50">
             {/* Logo */}
             <Link href='/' className="flex gap-2 justify-center items-center">
-                <img  className='w-12' src="/images/logo.png" alt="Lahori Logo" />
+                <img  className='w-12' src='/logo.png' alt="Lahori Logo" />
                 <h1 className="text-2xl font-bold tracking-wide">LAHORI</h1>
             </Link>
 
